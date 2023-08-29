@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*3. Ler um conjunto de números reais, armazenando-o em vetor e calcular o quadrado das componentes deste vetor, armazenando o resultado em outro vetor. 
+Os conjuntos têm 10 elementos cada. Imprimir todos os conjuntos.
+*/
+
+int main(){
+	int vet[100], vetQuadrado[100], i;
+	
+	printf("Digite os valores: \n");
+	for(i = 0; i<10; i++){
+		scanf("%d", &vet[i]);
+		fflush(stdin);
+	}
+	
+	for(i=0; i<10; i++){
+		vetQuadrado[i] = vet[i] * vet[i];
+	}
+	
+	printf("\nVetor inserido: \n");
+		for(i = 0; i<10; i++){
+			printf("%d  ", vet[i]);
+		}
+		
+	printf("\nVetor ao quadrado: \n");
+		for(i = 0; i<10; i++){
+			printf("%d  ", vetQuadrado[i]);
+		}
+		
+		return 0;
+}
