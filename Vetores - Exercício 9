@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+/*9. Crie um programa que lê 6 valores inteiros pares e, em seguida, mostre na tela os valores
+lidos na ordem inversa.
+*/
+
+int main() {
+  setlocale(LC_ALL, "Portuguese_Brasil");
+    int vetor[6],i;
+
+    printf("Digite os valores pares:\n");
+
+    for ( i = 0; i < 6; ) {
+        int valor;
+        scanf("%d", &valor);
+
+        if (valor % 2 == 0) {
+            vetor[i] = valor;
+            i++;
+        } else {
+            printf("Valor não é par. Digite novamente.\n");
+        }
+    }
+
+    printf("vetor lidos na ordem inversa:\n");
+    for (i = 5; i >= 0; i--) {
+        printf("%d\n", vetor[i]);
+    }
+
+    return 0;
+}
