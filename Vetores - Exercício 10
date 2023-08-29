@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+/*10. Faça um programa para ler a nota da prova de 15 alunos e armazene num vetor, calcule
+e imprima a média geral.
+*/
+
+int main() {
+  setlocale(LC_ALL, "Portuguese_Brasil");
+    int Notas[100],i,soma=0;
+    float media;
+    printf("Digite os valores pares:\n");
+
+    for ( i = 0; i < 15; i++ ) {
+        scanf("%d", &Notas[i]);
+        fflush(stdin); 
+      soma +=Notas[i];
+    }
+  
+  media = soma/15;
+  printf("\nA média das notas é: %f", media);
+    return 0;
+}
