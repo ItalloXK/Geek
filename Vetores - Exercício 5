@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*5. Leia um vetor de 10 posições. contar e escrever quantos valores pares ele possui.*/
+
+int main(){
+	int vet[100], i, cont=0;
+	
+	printf("Digite os valores: \n");
+	for(i=0; i<10;i++){
+		scanf("%d", &vet[i]);
+		if(vet[i]%2==0){
+			cont++;
+		}
+	}
+	printf("A quantidade de valores pares eh: %d", cont);
+	
+	return 0;
+}
