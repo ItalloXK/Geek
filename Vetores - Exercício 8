@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*8. Crie um programa que lê 6 valores inteiros e, em seguida, mostre na tela os valores lidos
+na ordem inversa.
+*/
+
+int main() {
+    int vetor[100],i;
+    int novoVetor[100];
+
+    printf("Digite os valores:\n");
+    for ( i = 0; i < 6; i++) {
+        scanf("%d", &vetor[i]);
+    }
+
+    // Criando o novo vetor com os valores invertidos
+    for ( i = 0; i < 6; i++) {
+        novoVetor[i] = vetor[5 - i];
+    }
+
+    printf("\nNovo vetor com os valores invertidos:\n");
+    for ( i = 0; i < 6; i++) {
+        printf("%d ", novoVetor[i]);
+    }
+    
+    return 0;
+}
