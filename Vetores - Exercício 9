@@ -8,7 +8,7 @@ lidos na ordem inversa.
 
 int main() {
   setlocale(LC_ALL, "Portuguese_Brasil");
-    int vetor[6],i;
+    int vetor[100],i;
 
     printf("Digite os valores pares:\n");
 
@@ -24,7 +24,7 @@ int main() {
         }
     }
 
-    printf("vetor lidos na ordem inversa:\n");
+    printf("Vetor lido na ordem inversa:\n");
     for (i = 5; i >= 0; i--) {
         printf("%d\n", vetor[i]);
     }
