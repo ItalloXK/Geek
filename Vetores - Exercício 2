@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//2. Crie um programa que lê 6 valores inteiros e, em seguida, mostre na tela os valores lidos.
+
+int main(){
+	int vet[100], i;
+	printf("Digite os valores: \n");
+		for(i=0; i<6;i++){
+			scanf("%d", &vet[i]);
+			fflush(stdin);
+		}
+	printf("\nOs valores sao: ");
+		for(i=0; i<6;i++){
+			printf("%d  ", vet[i]);
+		}
+}
