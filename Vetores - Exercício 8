@@ -7,7 +7,7 @@ na ordem inversa.
 */
 
 int main() {
-    setlocale(LC_ALL, "Portuguese_Brasil");
+    setlocale(LC_ALL, "Portuguese_Brazil");
     int vetor[100],i;
     int novoVetor[100];
 
