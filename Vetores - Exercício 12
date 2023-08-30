@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+/*12. Fazer um programa para ler 5 valores e, em seguida, mostrar todos os valores lidos
+juntamente com o maior, o menor e a média dos valores.
+*/
+
+
+int main() {
+  setlocale(LC_ALL, "Portuguese_Brazil");
+    int Vetor[100], i , maior = -100000000, menor = 100000000, soma=0;
+    float media;
+    
+    printf("Digite os valores :\n");
+    for ( i = 0; i < 5; i++ ) {
+        scanf("%d", &Vetor[i]);
+        fflush(stdin); 
+      	soma +=Vetor[i];
+      	if(Vetor[i]>maior){
+      		maior = Vetor[i];
+		  }
+		if(Vetor[i]<menor){
+      		menor = Vetor[i];
+		  }
+    }
+  printf("O maior valor é: %d \nO menor valor é: %d", maior, menor);
+  media = soma/5;
+  printf("\nA média dos valores é: %.2f", media);
+
+  return 0;
+}
