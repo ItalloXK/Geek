@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+/*13. Fazer um programa para ler 5 valores e, em seguida, mostrar a posição onde se encon-
+tram o maior e o menor valor.
+*/
+
+
+int main() {
+  setlocale(LC_ALL, "Portuguese_Brazil");
+    int Vetor[100], i , maior = -100000000, menor = 100000000, soma=0;
+    int posicaoMaior, posicaoMenor;
+    
+    printf("Digite os valores :\n");
+    for ( i = 0; i < 5; i++ ) {
+        scanf("%d", &Vetor[i]);
+        fflush(stdin); 
+      	soma +=Vetor[i];
+      	if(Vetor[i]>maior){
+      		maior = Vetor[i];
+      		posicaoMaior = i + 1;
+		  }
+		if(Vetor[i]<menor){
+      		menor = Vetor[i];
+      		posicaoMenor = i + 1;
+		  }
+    }
+    printf("O vetor digitado é: \n");
+    for(i=0; i<5; i++){
+    	printf("%d ", Vetor[i]);
+	}
+  	printf("\nA posição do maior valor é: %d \nA posição do menor valor é: %d", posicaoMaior, posicaoMenor);
+  
+  return 0;
+}
