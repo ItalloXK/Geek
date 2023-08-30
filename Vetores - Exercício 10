@@ -7,7 +7,7 @@ e imprima a média geral.
 */
 
 int main() {
-  setlocale(LC_ALL, "Portuguese_Brasil");
+  setlocale(LC_ALL, "Portuguese_Brazil");
     int Notas[100],i,soma=0;
     float media;
     printf("Digite os valores pares:\n");
