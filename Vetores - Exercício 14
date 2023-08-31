@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+/*14. Faça um programa que leia um vetor de 10 posições e verifique se existem valores iguais
+e os escreva na tela.
+*/
+
+int main() {
+  setlocale(LC_ALL, "Portuguese_Brazil");
+  
+    int vet[100],i,j;
+    printf("Digite os valores:\n");
+        for ( i = 0; i < 10; i++ ) {
+        scanf("%d", &vet[i]);
+        fflush(stdin); 
+    }
+
+  for(i=0; i<10; i++){    //COMANDO DE COMPARAÇÃO
+    for(j= i + 1; j<10; j++){
+      if(vet[i]==vet[j]){
+        printf("\nO valor %d se repete \n", vet[i]);
+      }
+    }
+  }
+    return 0;
+}
