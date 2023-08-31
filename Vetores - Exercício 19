@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+/*19. Faça um vetor de tamanho 50 preenchido com o seguinte valor: 
+(i + 5 * i )%(i + 1), sendo i a posição do elemento no vetor. 
+Em seguida imprima o vetor na tela.
+*/
+
+int main() {
+  setlocale(LC_ALL, "Portuguese_Brazil");
+  int vetor[1000],i, tamanho;
+  printf("Digite o tamanho\n");
+  scanf("%d", &tamanho);
+  for ( i = 0; i < tamanho; i++) {
+    vetor[i] = (i + 5 * i )%(i + 1);
+  }
+
+  printf("\nO vetor é: \n");
+  for(i=0; i<tamanho; i++){
+   printf("%d ", vetor[i]);
+    }
+  return 0;
+  }
+  
