@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*22. Faça um programa que leia dois vetores de 10 posições e calcule outro vetor contendo,
+nas posições pares os valores do primeiro e nas posições impares os valores do se-
+gundo.
+*/
+
+int main(){
+	int i, vetorA[100], vetorB[100], vetorC[100];
+	
+	printf("Digite o primeiro vetor: \n");
+	for(i=0; i<10; i++){
+		scanf("%d", &vetorA[i]);
+	}
+		printf("Digite o segundo vetor: \n");
+	for(i=0; i<5; i++){
+		scanf("%d", &vetorB[i]);
+	}
+	
+	for(i=0; i<10; i++){
+		if(i%2==0){
+			vetorC[i] = vetorA[i];
+		}
+		else{
+			vetorC[i] = vetorB[i];
+		}
+	}
+	printf("O novo vetor eh: \n");
+	for(i=0; i<10; i++){
+		printf("%d ", vetorC[i]);
+	}
+}
