@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+/*17. Leia um vetor de 10 posições e atribua valor O para todos os elementos que possuírem
+valores negativos.
+*/
+
+int main() {
+  setlocale(LC_ALL, "Portuguese_Brazil");
+    
+  int vetor[100],i;
+    
+  printf("Digite os valores do vetor: \n");
+    for ( i = 0; i < 10; i++) {
+      scanf("%d", &vetor[i]);
+      fflush(stdin);
+        if(vetor[i]<0){
+          vetor[i]=0;
+        }
+    }
+  printf("O novo vetor é: ");
+  for(i=0; i<10; i++){
+    printf("%d ", vetor[i]);
+  }
+  return 0;
+}
