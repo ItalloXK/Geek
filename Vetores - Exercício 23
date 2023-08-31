@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+/*
+23. Ler dois conjuntos de números reais, armazenando-os em vetores e calcular o produto escalar entre eles. Os conjuntos têm 5 elementos cada. Imprimir os dois conjuntos e o produto escalar, sendo que o produto escalar é dado por: x1 * y1 + x2 * y2 + xn * yn.
+*/
+int main() {
+  float vetorA[100], vetorB[100], produtoEscalar=0;
+  int i;
+  printf("Digite o primeiro vetor:\n");
+  for(i=0; i<5; i++){
+    scanf("%f", &vetorA[i]);
+  }
+  printf("Digite o segundo vetor:\n");
+  for(i=0; i<5; i++){
+    scanf("%f", &vetorB[i]);
+  }
+  for(i=0; i<5; i++){
+    produtoEscalar += vetorA[i] * vetorB[i];
+  }
+  printf("O primeiro vetor eh: \n");
+  for(i=0; i<5;i++){
+    printf("%2.f ", vetorA[i]);
+  }
+  printf("\nO segundo vetor eh: \n");
+  for(i=0; i<5;i++){
+    printf("%2.f ", vetorB[i]);
+  }
+  printf("\nO produto escalar eh: %2.f", produtoEscalar);
+  
+  return 0;
+  }
+  
