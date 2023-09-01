@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+/*
+26. Faça um programa que calcule o desvio padrão de um vetor V contendo N = 10 números,
+onde M é a media do vetor.
+*/
+int main() {
+    int i, N = 10;
+    float vetor[N];
+    float soma = 0.0, media, desvio_padrao = 0.0;
+
+    printf("Digite os %d numeros:\n", N);
+    for ( i = 0; i < N; i++) {
+        scanf("%f", &vetor[i]);
+        soma += vetor[i];
+    }
+
+    media = soma / N;
+
+    for ( i = 0; i < N; i++) {
+        desvio_padrao += pow(vetor[i] - media, 2);
+    }
+
+    desvio_padrao = sqrt(desvio_padrao / N);
+
+    printf("Media: %.2f\n", media);
+    printf("Desvio Padrao: %.2f\n", desvio_padrao);
+
+    return 0;
+}
