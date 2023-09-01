@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+/*
+25. Faça um programa que preencha um vetor de tamanho 100 com os 100 primeiros naturais que não são múltiplos de 7 ou que terminam com 7.
+*/
+int main() {
+    int vetor[100];
+    int contador = 0;
+    int i, numero = 1;
+
+    while (contador < 100) {
+        if (numero % 7 != 0 && numero % 10 != 7) {
+            vetor[contador] = numero;
+            contador++;
+        }
+        numero++;  // itera os números naturais
+    }
+
+    printf("Os 100 primeiros naturais que nao sao multiplos de 7 ou terminam com 7:\n");
+    for (i = 0; i < 100; i++) {
+        printf("%d ", vetor[i]);
+        if ((i + 1) % 10 == 0) {  //Verifica se já foram impressos 10 números na linha atual. Se sim, imprime uma nova linha.
+            printf("\n");
+        }
+    }
+
+    return 0;
+}
