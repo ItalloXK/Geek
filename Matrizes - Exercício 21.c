@@ -1,5 +1,12 @@
 #include <stdio.h>
-//
+/*
+21. Faça um programa que leia duas matrizes 2 x 2 com valores reais. Ofereça ao usuário
+um menu de opções:
+(a) somar as duas matrizes
+(b) subtrair a primeira matriz da segunda
+(c) adicionar uma constante às duas matrizes
+(d) imprimir as matrizes
+*/
 int main(){
   int i , j, escolha, constante;
   float matrizA[2][2], matrizB[2][2], matrizSoma[2][2], matrizSubtracao[2][2];
@@ -36,7 +43,7 @@ printf("Os valores da segunda matriz sao: \n\n");
   }
   
   //EXIBINDO O MENU
-  printf("Digite 1 para somar as matrizes!\n\nDigite 2 para subtrair a primeira matriz da segunda matriz!\n\nDigite 3 para adicionar uma constante para as duas matrizes!\n\nDigite 4 para imprimir a matriz resultado!\n");
+  printf("Digite 1 para somar as matrizes!\n\nDigite 2 para subtrair a primeira matriz da segunda matriz!\n\nDigite 3 para adicionar uma constante para as duas matrizes!\n\n");
   scanf("%d", &escolha);
   
   switch(escolha){
